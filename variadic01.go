@@ -14,7 +14,7 @@ func hello(names ...string) {
 
 	// print any of the values passed in
 	fmt.Print(names, " \n")
-    fmt.Print("The length of names slice is: ", len(names), "\n")
+	fmt.Print("The length of names slice is: ", len(names), "\n")
 	fmt.Print("The cap of names slice is: ", len(names), "\n")
 
 	namesType := reflect.TypeOf(names);
