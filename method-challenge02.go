@@ -49,7 +49,7 @@ func main() {
 
 	slice := []*Virtmach{&vm1, &vm2}
 	slice[1].display()
-    slice[1].increaseram(16)
+	slice[1].increaseram(16)
 	slice[1].display()
 
 	vm2.display()
