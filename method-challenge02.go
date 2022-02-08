@@ -53,4 +53,10 @@ func main() {
 	slice[1].display()
 
 	vm2.display()
+
+	slice2 := []Virtmach{vm1, vm2}
+	slice2[1].display()
+	slice2[1].increaseram(-16)
+	slice2[1].display()   //back to ram 16
+	vm2.display() //but vm2 didn't change
 }
