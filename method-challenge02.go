@@ -42,4 +42,15 @@ func main() {
 
 	vm1.increaseram(4)
 	vm1.display()
+
+	vm2 := Virtmach{"10.0.0.8", "elephant", 32, 16}
+
+	vm2.display();
+
+	slice := []*Virtmach{&vm1, &vm2}
+	slice[1].display()
+    slice[1].increaseram(16)
+	slice[1].display()
+
+	vm2.display()
 }
