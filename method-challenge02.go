@@ -23,8 +23,8 @@ func (vm *Virtmach) expanddisk(gb int){
 func(vm *Virtmach) increaseram(ram int) {
 	vm.ram = vm.ram + ram
 }
-func (vm *Virtmach)display(){
-	fmt.Printf("The virtual machine info: %+v \n", *vm)
+func (vm Virtmach)display(){
+	fmt.Printf("The virtual machine info: %+v \n", vm)
 }
 
 func main() {
