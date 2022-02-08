@@ -11,15 +11,12 @@ type Virtmach struct{
 	ram int
 }
 
-// ipset(string) - change IP address
-// use a pointer here as we are making a change
+
 func (vm *Virtmach)ipset(ip string){
 	vm.ip = ip // change the value of ip associated with Virtmach
 }
 
-// diskexpand(int) - expand disk by int
-// use a pointer here as we are making a change
-func (vm *Virtmach)diskexpand(gb int){
+func (vm *Virtmach) expanddisk(gb int){
 	vm.diskgb = vm.diskgb + gb // increase
 }
 
@@ -27,10 +24,7 @@ func(vm *Virtmach) increaseram(ram int) {
 	vm.ram = vm.ram + ram
 }
 func (vm *Virtmach)display(){
-	fmt.Println("Primary IP Address:", vm.ip) // primary IP address
-	fmt.Println("Hostname:", vm.hostname)     // hostname
-	fmt.Println("Disk GB:", vm.diskgb)        // diskgb
-	fmt.Println("RAM:", vm.ram)               // ram
+	fmt.Printf("The virtual machine info: %+v \n", *vm)
 }
 
 func main() {
@@ -40,7 +34,7 @@ func main() {
 
 	vm1.display() // show the current state
 
-	vm1.diskexpand(3) // increase by 3 GB
+	vm1.expanddisk(3) // increase by 3 GB
 
 	vm1.ipset("192.168.77.33") // change the IP address
 
