@@ -5,6 +5,7 @@
 package main
 
 import "fmt"
+import "reflect"
 
 // unpack the 'names' argument (effectively a slice)
 // a "variadic" function accepts an indefinite number of a type
@@ -15,6 +16,9 @@ func hello(names ...string) {
 	fmt.Print(names, " \n")
     fmt.Print("The length of names slice is: ", len(names), "\n")
 	fmt.Print("The cap of names slice is: ", len(names), "\n")
+
+	namesType := reflect.TypeOf(names);
+	fmt.Print("the type is: ", namesType.Kind(), "\n")
 
 	total := 0
 
