@@ -1,6 +1,3 @@
-/* Alta3 Research | RZFeeser
-   Go Guessing Game      */
-
 package main
 
 import (
