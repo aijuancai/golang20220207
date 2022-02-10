@@ -62,11 +62,11 @@ func main() {
 
 			fmt.Printf("Game over!!\n ")
 			fmt.Printf("The correct number is %d\n", secretNumber)
-			break
-
+			// break
 		}
-		// every time the game ends, print this message
-		fmt.Println("Thanks for playing, see you next time!")
 
 	}
+	// every time the game ends, print this message
+	fmt.Println("Thanks for playing, see you next time!")
+
 }

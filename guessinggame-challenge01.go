@@ -29,7 +29,7 @@ func main() {
 
 	// Print some basic information on the screen for the user
 	fmt.Println("Game: Guess a number between 0 and 10")
-	fmt.Printf("You have %d tries ", count)
+	fmt.Printf("You have %d tries\n ", count)
 
 	// generating random numbers
 	source := rand.NewSource(time.Now().UnixNano())
@@ -77,8 +77,7 @@ func main() {
 			break
 
 		}
-		// every time the game ends, print this message
-		fmt.Println("Thanks for playing, see you next time!")
-
 	}
+	// every time the game ends, print this message
+	fmt.Println("Thanks for playing, see you next time!")
 }

@@ -27,9 +27,14 @@ func main() {
 	// we need to dereference the pointer and get the value
 	count := *num    // dereference the pointer and get the value
 
+	numRange := 10
+	if count > 5 { numRange = 100}
+
 	// Print some basic information on the screen for the user
-	fmt.Println("Game: Guess a number between 0 and 10")
-	fmt.Printf("You have %d tries ", count)
+	fmt.Printf("Game: Guess a number between 0 and %d\n", numRange)
+	fmt.Printf("You have %d tries\n ", count)
+
+
 
 	// generating random numbers
 	source := rand.NewSource(time.Now().UnixNano())
@@ -40,10 +45,9 @@ func main() {
 	// now we can generate some chaos with our "source" seed
 	randomizer := rand.New(source)
 
-	numRange := 10
-	if count > 5 { numRange = 100}
 
-	secretNumber := randomizer.Intn(numRange)  // generate numbers between 0 and 10 only
+
+	secretNumber := randomizer.Intn(numRange+1)  // generate numbers between 0 and 10 only
 
 	// we declare a variable of type int called "guess"
 	var guess int
