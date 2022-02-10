@@ -39,7 +39,7 @@ func main() {
 
 	// now we can generate some chaos with our "source" seed
 	randomizer := rand.New(source)
-	secretNumber := randomizer.Intn(10)  // generate numbers between 0 and 10 only
+	secretNumber := randomizer.Intn(10+1)  // generate numbers between 0 and 10 only
 
 	// we declare a variable of type int called "guess"
 	var guess int
